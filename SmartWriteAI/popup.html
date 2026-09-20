@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <title>SmartWrite AI</title>
+    <link rel="stylesheet" href="popup.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <header class="header">
+            <div class="logo-area">
+                <div class="logo-icon">
+                    <i class="fa-solid fa-wand-magic-sparkles"></i>
+                </div>
+                <h1>SmartWrite AI</h1>
+            </div>
+            <div class="actions-area">
+                <button id="theme-toggle" class="icon-btn" title="Toggle Dark/Light Mode">
+                    <i class="fa-solid fa-moon" id="theme-icon"></i>
+                </button>
+                <button class="icon-btn" title="Settings">
+                    <i class="fa-solid fa-gear"></i>
+                </button>
+            </div>
+        </header>
+
+        <!-- Main Content -->
+        <main>
+            <!-- Input Area -->
+            <div class="input-section">
+                <textarea id="text-input" placeholder="Paste or enter your text here..."></textarea>
+                <div class="toolbar">
+                    <span class="counter" id="input-counter">0 chars | 0 words</span>
+                    <button class="text-btn clear-btn" id="clear-btn">
+                        <i class="fa-solid fa-trash-can"></i> Clear
+                    </button>
+                </div>
+            </div>
+
+            <!-- Action Controls -->
+            <div class="controls-section">
+                <div class="action-buttons">
+                    <button class="primary-btn" id="btn-summarize"><i class="fa-solid fa-compress"></i> Summarize</button>
+                    <button class="primary-btn" id="btn-rewrite"><i class="fa-solid fa-pen-nib"></i> Rewrite</button>
+                    <button class="primary-btn" id="btn-grammar"><i class="fa-solid fa-check-double"></i> Grammar Fix</button>
+                    <button class="primary-btn" id="btn-simple"><i class="fa-solid fa-child-reaching"></i> Make Simple</button>
+                    <button class="primary-btn outline" id="btn-generate"><i class="fa-solid fa-plus"></i> Generate</button>
+                </div>
+                
+                <div class="tone-selector">
+                    <label for="tone">Tone:</label>
+                    <select id="tone">
+                        <option value="Professional">Professional</option>
+                        <option value="Friendly">Friendly</option>
+                        <option value="Formal">Formal</option>
+                        <option value="Simple">Simple</option>
+                    </select>
+                </div>
+            </div>
+
+            <!-- Output Area -->
+            <div class="output-section">
+                <div class="output-header">
+                    <span>Result</span>
+                    <div id="loading" class="loading hidden">
+                        <i class="fa-solid fa-circle-notch fa-spin"></i> Processing...
+                    </div>
+                </div>
+                <textarea id="text-output" readonly placeholder="Your improved text will appear here..."></textarea>
+                <div class="output-footer">
+                    <span class="counter" id="output-counter">0 chars | 0 words</span>
+                    <button class="primary-btn" id="copy-btn">
+                        <i class="fa-regular fa-copy"></i> Copy Result
+                    </button>
+                </div>
+            </div>
+        </main>
+    </div>
+    <script src="popup.js"></script>
+</body>
+</html>

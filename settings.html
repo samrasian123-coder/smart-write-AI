@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SmartShot Settings</title>
+    <link rel="stylesheet" href="settings.css">
+</head>
+<body>
+    <div class="container">
+        <h1>SmartShot Settings</h1>
+        
+        <div class="card">
+            <h2>Preferences</h2>
+            <div class="setting-item">
+                <label for="theme-toggle">Dark Mode</label>
+                <input type="checkbox" id="theme-toggle">
+            </div>
+            <div class="setting-item">
+                <label for="format-select">Screenshot Format</label>
+                <select id="format-select">
+                    <option value="png">PNG</option>
+                    <option value="jpeg">JPEG</option>
+                </select>
+            </div>
+            <div class="setting-item">
+                <label for="autosave-toggle">Auto-save Screenshots</label>
+                <input type="checkbox" id="autosave-toggle">
+            </div>
+            <button id="btn-save" class="btn primary mt-4">Save Settings</button>
+            <div id="save-msg" class="msg hidden">Settings saved!</div>
+        </div>
+
+        <div class="card" id="privacy">
+            <h2>Privacy</h2>
+            <p>SmartShot processes screenshots locally whenever possible. Screenshots and settings are stored locally in the browser. No personal data is sent to an external server.</p>
+        </div>
+
+        <div class="card" id="about">
+            <h2>About SmartShot</h2>
+            <p>Version 1.0.0</p>
+            <p>A professional screenshot and image utility extension.</p>
+        </div>
+    </div>
+    <script src="storage.js"></script>
+    <script src="settings.js"></script>
+</body>
+</html>

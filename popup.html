@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SmartShot</title>
+    <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+    <div class="header">
+        <div class="logo">
+            <img src="icons/icon48.png" alt="SmartShot Logo" class="logo-icon">
+            <div class="logo-text">
+                <h1>SmartShot</h1>
+                <p>Screenshot & Image Tools</p>
+            </div>
+        </div>
+    </div>
+
+    <div id="error-message" class="error-message hidden"></div>
+    <div id="unsupported-message" class="unsupported-message hidden">
+        SmartShot cannot operate on this page (e.g., Chrome Web Store or internal pages).
+    </div>
+
+    <div class="main-content">
+        <div class="section">
+            <button id="btn-capture-visible" class="btn primary">Capture Screen</button>
+            <button id="btn-capture-area" class="btn primary">Select Area</button>
+            <button id="btn-capture-full" class="btn primary">Full Page</button>
+        </div>
+
+        <div class="section">
+            <h2>Image Tools</h2>
+            <div class="btn-group">
+                <button id="btn-find-images" class="btn secondary">Find Images</button>
+                <button id="btn-copy-url" class="btn secondary">Copy Image URL</button>
+                <button id="btn-image-info" class="btn secondary">Image Info</button>
+            </div>
+        </div>
+
+        <div class="section history-section">
+            <div class="history-header">
+                <h2>Recent Screenshots</h2>
+                <button id="btn-clear-history" class="btn-text">Clear</button>
+            </div>
+            <div id="history-grid" class="history-grid">
+                <!-- History items injected here -->
+            </div>
+        </div>
+    </div>
+
+    <div class="footer">
+        <button id="btn-settings" class="btn-link">Settings</button>
+        <span class="divider">•</span>
+        <button id="btn-privacy" class="btn-link">Privacy</button>
+        <span class="divider">•</span>
+        <button id="btn-about" class="btn-link">About</button>
+    </div>
+
+    <!-- Scripts -->
+    <script src="storage.js"></script>
+    <script src="screenshot.js"></script>
+    <script src="image-tools.js"></script>
+    <script src="popup.js"></script>
+</body>
+</html>
